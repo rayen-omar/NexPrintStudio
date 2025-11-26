@@ -1,0 +1,1948 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Template qui hérite de la page d'accueil -->
+    <template id="nexprint_homepage" name="NexPrint Homepage" inherit_id="website.homepage">
+        <!-- Remplacement du contenu de la page d'accueil -->
+        <xpath expr="//div[@id='wrap']" position="replace">
+            <div id="wrap" class="oe_structure">
+                <!-- Section Hero Professionnelle -->
+                <section class="s_cover parallax s_parallax_is_fixed bg-black-50" data-vcss="001" data-snippet="s_cover" data-scroll-background-ratio="1" style="min-height: 600px;">
+                    <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 0;"/>
+                    <div class="o_we_bg_filter bg-black-50"/>
+                    <div class="container d-flex align-items-center" style="min-height: 600px;">
+                        <div class="row w-100">
+                            <div class="col-lg-8 col-xl-7 text-center text-lg-start mx-auto">
+                                <h1 class="display-2 fw-bold text-white mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                    NexPrint Studio
+                                </h1>
+                                <p class="lead text-white mb-4 fs-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                                    Votre partenaire en communication visuelle et impression professionnelle
+                                </p>
+                                <p class="text-white mb-4 fs-5">
+                                    Spécialisés dans l'impression, la gravure publicitaire, la signalétique, 
+                                    le textile et bien plus encore.
+                                </p>
+                                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+                                    <a href="/contactus" class="btn btn-danger btn-lg px-5 py-3">
+                                        <i class="fa fa-envelope me-2"></i>Demander un devis
+                                    </a>
+                                    <a href="#services" class="btn btn-outline-light btn-lg px-5 py-3">
+                                        <i class="fa fa-arrow-down me-2"></i>Nos services
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section À propos -->
+                <section class="s_text_block pt-5 pb-5" data-vcss="001" data-snippet="s_text_block">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto text-center">
+                                <h2 class="display-5 fw-bold mb-4 text-primary">À propos de NexPrint Studio</h2>
+                                <p class="lead mb-4 fs-5">
+                                    <strong>NexPrint Studio</strong> est une société spécialisée dans la 
+                                    <strong>communication visuelle</strong>, l'<strong>impression</strong> et la 
+                                    <strong>gravure publicitaire</strong>.
+                                </p>
+                                <p class="mb-4 fs-5">
+                                    Nous offrons une gamme complète de services incluant les goodies, la signalétique, 
+                                    le textile, le marquage, la sublimation, l'impression UV, la découpe CNC et la gravure laser. 
+                                    Notre expertise technique et notre équipe passionnée vous accompagnent dans tous vos projets 
+                                    de communication visuelle.
+                                </p>
+                                <div class="row mt-5">
+                                    <div class="col-md-4 mb-4">
+                                        <div class="text-center p-4 h-100" style="background: #f8f9fa; border-radius: 10px;">
+                                            <i class="fa fa-trophy fa-3x text-primary mb-3"></i>
+                                            <h5 class="fw-bold">Excellence</h5>
+                                            <p class="mb-0">Qualité professionnelle garantie</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-4">
+                                        <div class="text-center p-4 h-100" style="background: #f8f9fa; border-radius: 10px;">
+                                            <i class="fa fa-cogs fa-3x text-primary mb-3"></i>
+                                            <h5 class="fw-bold">Technologie</h5>
+                                            <p class="mb-0">Équipements de pointe</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-4">
+                                        <div class="text-center p-4 h-100" style="background: #f8f9fa; border-radius: 10px;">
+                                            <i class="fa fa-handshake-o fa-3x text-primary mb-3"></i>
+                                            <h5 class="fw-bold">Accompagnement</h5>
+                                            <p class="mb-0">Conseil et suivi personnalisé</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Services Détaillés -->
+                <section id="services" class="s_features_grid pt-5 pb-5 bg-light" data-vcss="001" data-snippet="s_features_grid">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center mb-5">
+                                <h2 class="display-5 fw-bold mb-3 text-primary">Nos Services</h2>
+                                <p class="lead fs-5">Une gamme complète de solutions pour tous vos besoins en communication visuelle</p>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <!-- Communication Visuelle -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-eye fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Communication Visuelle</h4>
+                                        <p class="text-muted">
+                                            Création et réalisation de supports visuels pour renforcer votre identité de marque 
+                                            et votre présence.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Impression -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-print fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Impression</h4>
+                                        <p class="text-muted">
+                                            Services d'impression haute qualité sur tous types de supports 
+                                            avec des finitions professionnelles.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Gravure Publicitaire -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-tag fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Gravure Publicitaire</h4>
+                                        <p class="text-muted">
+                                            Gravure laser et traditionnelle pour personnaliser vos objets 
+                                            et supports publicitaires.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Goodies -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-gift fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Goodies</h4>
+                                        <p class="text-muted">
+                                            Large sélection d'objets publicitaires personnalisables pour 
+                                            promouvoir votre marque efficacement.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Stylos et fournitures</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Mugs et bouteilles</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Accessoires tech</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Signalétique -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-map-signs fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Signalétique</h4>
+                                        <p class="text-muted">
+                                            Solutions complètes de signalétique intérieure et extérieure 
+                                            pour guider et informer vos visiteurs.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Panneaux directionnels</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Enseignes lumineuses</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Plaques professionnelles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Textile -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-shopping-bag fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Textile</h4>
+                                        <p class="text-muted">
+                                            Personnalisation textile professionnelle : vêtements, uniformes, 
+                                            accessoires avec marquage durable.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>T-shirts et polos</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Uniformes corporate</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sacs et accessoires</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Marquage -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-pencil fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Marquage</h4>
+                                        <p class="text-muted">
+                                            Techniques variées de marquage pour tous supports : 
+                                            sérigraphie, tampographie, broderie.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sérigraphie</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Tampographie</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Broderie</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Sublimation -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-magic fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Sublimation</h4>
+                                        <p class="text-muted">
+                                            Impression par sublimation pour des couleurs éclatantes et 
+                                            durables sur textile et objets.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Textile polyester</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Mugs et tasses</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Plaques métalliques</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Impression UV -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-sun-o fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Impression UV</h4>
+                                        <p class="text-muted">
+                                            Technologie UV pour imprimer directement sur presque tous les 
+                                            matériaux avec une qualité exceptionnelle.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Multi-supports</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Résistance UV</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Relief possible</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Découpe CNC -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-scissors fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Découpe CNC</h4>
+                                        <p class="text-muted">
+                                            Découpe de précision assistée par ordinateur pour créer 
+                                            des formes complexes sur divers matériaux.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Découpe précise</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Formes complexes</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Prototypage</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Laser -->
+                            <div class="col-lg-4 col-md-6">
+                                <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                    <div class="card-body text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-bolt fa-4x text-primary"></i>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Gravure Laser</h4>
+                                        <p class="text-muted">
+                                            Gravure laser de précision pour personnaliser bois, métal, plastique 
+                                            et autres matériaux avec finesse.
+                                        </p>
+                                        <ul class="list-unstyled text-start mt-3">
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Précision maximale</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Multi-matériaux</li>
+                                            <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Personnalisation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Processus -->
+                <section class="s_three_columns pt-5 pb-5" data-vcss="001" data-snippet="s_three_columns">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 text-center mb-5">
+                                <h2 class="display-5 fw-bold mb-3 text-primary">Notre Processus de Travail</h2>
+                                <p class="lead fs-5">Un accompagnement professionnel de A à Z</p>
+                            </div>
+                        </div>
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="text-center p-4">
+                                    <div class="mb-4">
+                                        <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%;">
+                                            <span class="text-white fw-bold" style="font-size: 2rem;">1</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Consultation</h4>
+                                    <p class="text-muted">
+                                        Nous analysons vos besoins et vous proposons la meilleure solution 
+                                        adaptée à votre projet et votre budget.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="text-center p-4">
+                                    <div class="mb-4">
+                                        <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%;">
+                                            <span class="text-white fw-bold" style="font-size: 2rem;">2</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Conception</h4>
+                                    <p class="text-muted">
+                                        Notre équipe créative conçoit et développe votre projet avec attention 
+                                        aux détails et respect de vos attentes.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="text-center p-4">
+                                    <div class="mb-4">
+                                        <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%;">
+                                            <span class="text-white fw-bold" style="font-size: 2rem;">3</span>
+                                        </div>
+                                    </div>
+                                    <h4 class="fw-bold mb-3">Livraison</h4>
+                                    <p class="text-muted">
+                                        Nous respectons vos délais et livrons un produit fini de qualité 
+                                        supérieure, prêt à être utilisé.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section Call to Action -->
+                <section class="s_call_to_action pt-5 pb-5" data-vcss="001" data-snippet="s_call_to_action" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 mx-auto text-center">
+                                <h2 class="display-5 fw-bold text-white mb-4">Besoin d'un Devis Personnalisé ?</h2>
+                                <p class="lead text-white mb-5 fs-4">
+                                    Contactez-nous pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
+                                </p>
+                                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                    <a href="/contactus" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                                        <i class="fa fa-envelope me-2"></i>Demander un Devis Gratuit
+                                    </a>
+                                    <a href="tel:+15555555556" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
+                                        <i class="fa fa-phone me-2"></i>Nous Appeler
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Template qui remplace complètement website.services -->
+    <template id="website_services_nexprint" name="Services" t-name="website.services">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!-- Section Hero Services -->
+                <div class="oe_structure">
+                    <section class="s_cover parallax s_parallax_is_fixed bg-black-50" data-vcss="001" data-snippet="s_cover" data-scroll-background-ratio="1" style="min-height: 500px;">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter bg-black-50"/>
+                        <div class="container d-flex align-items-center" style="min-height: 500px;">
+                            <div class="row w-100">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h1 class="display-3 fw-bold text-white mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                        Nos Services
+                                    </h1>
+                                    <p class="lead text-white fs-4 mb-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                                        Une gamme complète de solutions professionnelles pour tous vos besoins en communication visuelle
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Contenu principal -->
+                <div class="oe_structure">
+                    <!-- Section Introduction -->
+                    <section class="s_text_block pt-5 pb-4" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <p class="lead fs-5 mb-4">
+                                        <strong>NexPrint Studio</strong> vous propose une large gamme de services en 
+                                        <strong>communication visuelle</strong>, <strong>impression</strong> et 
+                                        <strong>gravure publicitaire</strong>. Découvrez nos solutions professionnelles 
+                                        adaptées à tous vos projets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Services Détaillés -->
+                    <section class="s_features_grid pt-4 pb-5 bg-light" data-vcss="001" data-snippet="s_features_grid">
+                        <div class="container">
+                            <div class="row g-4">
+                                <!-- Communication Visuelle -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-eye fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Communication Visuelle</h4>
+                                            <p class="text-muted">
+                                                Création et réalisation de supports visuels pour renforcer votre identité de marque 
+                                                et votre présence. Signalétique, enseignes, décoration intérieure et extérieure.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Signalétique</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Enseignes</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Décoration</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Impression -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-print fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Impression Professionnelle</h4>
+                                            <p class="text-muted">
+                                                Impression numérique de haute qualité pour tous vos supports : flyers, affiches, 
+                                                cartes de visite, brochures, dépliants et bien plus encore.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Impression numérique</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Grand format</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Impression offset</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Gravure Publicitaire -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-diamond fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Gravure Publicitaire</h4>
+                                            <p class="text-muted">
+                                                Gravure précise sur différents matériaux pour créer des objets publicitaires 
+                                                personnalisés et durables. Gravure laser de haute précision.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Gravure laser</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Plaques professionnelles</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Personnalisation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Goodies -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-gift fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Goodies &amp; Objets Publicitaires</h4>
+                                            <p class="text-muted">
+                                                Création et personnalisation d'objets publicitaires pour vos événements, 
+                                                campagnes marketing et relations clients.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Objets personnalisés</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Événements</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Campagnes marketing</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Signalétique -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-map-signs fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Signalétique</h4>
+                                            <p class="text-muted">
+                                                Conception et réalisation de signalétique intérieure et extérieure pour 
+                                                guider et informer vos visiteurs efficacement.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Signalétique intérieure</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Signalétique extérieure</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Panneaux directionnels</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Textile -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-tshirt fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Textile &amp; Vêtements</h4>
+                                            <p class="text-muted">
+                                                Personnalisation textile : flocage, broderie, sérigraphie pour vêtements 
+                                                et accessoires de qualité.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Flocage</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Broderie</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sérigraphie</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Marquage -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-tag fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Marquage</h4>
+                                            <p class="text-muted">
+                                                Marquage professionnel sur différents supports pour identifier et 
+                                                personnaliser vos produits avec précision.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Marquage industriel</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Étiquetage</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Identification</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sublimation -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-magic fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Sublimation</h4>
+                                            <p class="text-muted">
+                                                Impression par sublimation pour des designs durables et résistants sur 
+                                                textiles et objets de toutes formes.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sublimation textile</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sublimation objets</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Designs durables</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- UV Printing -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-sun-o fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Impression UV</h4>
+                                            <p class="text-muted">
+                                                Impression UV haute définition sur matériaux rigides pour des résultats 
+                                                exceptionnels et durables.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Haute définition</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Matériaux rigides</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Résistance UV</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- CNC -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-cog fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Découpe CNC</h4>
+                                            <p class="text-muted">
+                                                Découpe numérique précise pour créer des formes complexes et des 
+                                                prototypes sur différents matériaux.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Découpe précise</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Formes complexes</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Prototypage</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Laser -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-bolt fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Gravure Laser</h4>
+                                            <p class="text-muted">
+                                                Gravure laser de précision pour personnaliser bois, métal, plastique 
+                                                et autres matériaux avec finesse.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Précision maximale</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Multi-matériaux</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Personnalisation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Processus -->
+                    <section class="s_three_columns pt-5 pb-5" data-vcss="001" data-snippet="s_three_columns">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center mb-5">
+                                    <h2 class="display-5 fw-bold mb-3 text-primary">Notre Processus de Travail</h2>
+                                    <p class="lead fs-5">Un accompagnement professionnel de A à Z</p>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%;">
+                                                <span class="text-white fw-bold" style="font-size: 2rem;">1</span>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Consultation</h4>
+                                        <p class="text-muted">
+                                            Nous analysons vos besoins et vous proposons la meilleure solution 
+                                            adaptée à votre projet et votre budget.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%;">
+                                                <span class="text-white fw-bold" style="font-size: 2rem;">2</span>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Conception</h4>
+                                        <p class="text-muted">
+                                            Notre équipe créative conçoit et développe votre projet avec attention 
+                                            aux détails et respect de vos attentes.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%;">
+                                                <span class="text-white fw-bold" style="font-size: 2rem;">3</span>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Livraison</h4>
+                                        <p class="text-muted">
+                                            Nous respectons vos délais et livrons un produit fini de qualité 
+                                            supérieure, prêt à être utilisé.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Call to Action -->
+                    <section class="s_call_to_action pt-5 pb-5" data-vcss="001" data-snippet="s_call_to_action" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h2 class="display-5 fw-bold text-white mb-4">Besoin d'un Devis Personnalisé ?</h2>
+                                    <p class="lead text-white mb-5 fs-4">
+                                        Contactez-nous pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
+                                    </p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <a href="/contactus" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-envelope me-2"></i>Demander un Devis Gratuit
+                                        </a>
+                                        <a href="tel:+15555555556" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-phone me-2"></i>Nous Appeler
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Template pour la page Services personnalisée avec route /nos-services -->
+    <template id="services_page_template" name="Nos Services - NexPrint Studio">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!-- Section Hero Services -->
+                <div class="oe_structure">
+                    <section class="s_cover parallax s_parallax_is_fixed bg-black-50" data-vcss="001" data-snippet="s_cover" data-scroll-background-ratio="1" style="min-height: 500px;">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter bg-black-50"/>
+                        <div class="container d-flex align-items-center" style="min-height: 500px;">
+                            <div class="row w-100">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h1 class="display-3 fw-bold text-white mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                        Nos Services
+                                    </h1>
+                                    <p class="lead text-white fs-4 mb-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                                        Une gamme complète de solutions professionnelles pour tous vos besoins en communication visuelle
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Contenu principal -->
+                <div class="oe_structure">
+                    <!-- Section Introduction -->
+                    <section class="s_text_block pt-5 pb-4" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <p class="lead fs-5 mb-4">
+                                        <strong>NexPrint Studio</strong> vous propose une large gamme de services en 
+                                        <strong>communication visuelle</strong>, <strong>impression</strong> et 
+                                        <strong>gravure publicitaire</strong>. Découvrez nos solutions professionnelles 
+                                        adaptées à tous vos projets.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Services Détaillés -->
+                    <section class="s_features_grid pt-4 pb-5 bg-light" data-vcss="001" data-snippet="s_features_grid">
+                        <div class="container">
+                            <div class="row g-4">
+                                <!-- Communication Visuelle -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-eye fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Communication Visuelle</h4>
+                                            <p class="text-muted">
+                                                Création et réalisation de supports visuels pour renforcer votre identité de marque 
+                                                et votre présence. Signalétique, enseignes, décoration intérieure et extérieure.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Signalétique</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Enseignes</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Décoration</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Impression -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-print fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Impression Professionnelle</h4>
+                                            <p class="text-muted">
+                                                Impression numérique de haute qualité pour tous vos supports : flyers, affiches, 
+                                                cartes de visite, brochures, dépliants et bien plus encore.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Impression numérique</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Grand format</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Impression offset</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Gravure Publicitaire -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-diamond fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Gravure Publicitaire</h4>
+                                            <p class="text-muted">
+                                                Gravure précise sur différents matériaux pour créer des objets publicitaires 
+                                                personnalisés et durables. Gravure laser de haute précision.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Gravure laser</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Plaques professionnelles</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Personnalisation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Goodies -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-gift fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Goodies &amp; Objets Publicitaires</h4>
+                                            <p class="text-muted">
+                                                Création et personnalisation d'objets publicitaires pour vos événements, 
+                                                campagnes marketing et relations clients.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Objets personnalisés</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Événements</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Campagnes marketing</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Signalétique -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-map-signs fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Signalétique</h4>
+                                            <p class="text-muted">
+                                                Conception et réalisation de signalétique intérieure et extérieure pour 
+                                                guider et informer vos visiteurs efficacement.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Signalétique intérieure</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Signalétique extérieure</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Panneaux directionnels</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Textile -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-tshirt fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Textile &amp; Vêtements</h4>
+                                            <p class="text-muted">
+                                                Personnalisation textile : flocage, broderie, sérigraphie pour vêtements 
+                                                et accessoires de qualité.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Flocage</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Broderie</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sérigraphie</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Marquage -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-tag fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Marquage</h4>
+                                            <p class="text-muted">
+                                                Marquage professionnel sur différents supports pour identifier et 
+                                                personnaliser vos produits avec précision.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Marquage industriel</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Étiquetage</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Identification</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Sublimation -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-magic fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Sublimation</h4>
+                                            <p class="text-muted">
+                                                Impression par sublimation pour des designs durables et résistants sur 
+                                                textiles et objets de toutes formes.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sublimation textile</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Sublimation objets</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Designs durables</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- UV Printing -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-sun-o fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Impression UV</h4>
+                                            <p class="text-muted">
+                                                Impression UV haute définition sur matériaux rigides pour des résultats 
+                                                exceptionnels et durables.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Haute définition</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Matériaux rigides</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Résistance UV</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- CNC -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-cog fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Découpe CNC</h4>
+                                            <p class="text-muted">
+                                                Découpe numérique précise pour créer des formes complexes et des 
+                                                prototypes sur différents matériaux.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Découpe précise</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Formes complexes</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Prototypage</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Laser -->
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0" style="transition: transform 0.3s;">
+                                        <div class="card-body text-center p-4">
+                                            <div class="mb-3">
+                                                <i class="fa fa-bolt fa-4x text-primary"></i>
+                                            </div>
+                                            <h4 class="fw-bold mb-3">Gravure Laser</h4>
+                                            <p class="text-muted">
+                                                Gravure laser de précision pour personnaliser bois, métal, plastique 
+                                                et autres matériaux avec finesse.
+                                            </p>
+                                            <ul class="list-unstyled text-start mt-3">
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Précision maximale</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Multi-matériaux</li>
+                                                <li class="mb-2"><i class="fa fa-check text-success me-2"></i>Personnalisation</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Processus -->
+                    <section class="s_three_columns pt-5 pb-5" data-vcss="001" data-snippet="s_three_columns">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center mb-5">
+                                    <h2 class="display-5 fw-bold mb-3 text-primary">Notre Processus de Travail</h2>
+                                    <p class="lead fs-5">Un accompagnement professionnel de A à Z</p>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%;">
+                                                <span class="text-white fw-bold" style="font-size: 2rem;">1</span>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Consultation</h4>
+                                        <p class="text-muted">
+                                            Nous analysons vos besoins et vous proposons la meilleure solution 
+                                            adaptée à votre projet et votre budget.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%;">
+                                                <span class="text-white fw-bold" style="font-size: 2rem;">2</span>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Conception</h4>
+                                        <p class="text-muted">
+                                            Notre équipe créative conçoit et développe votre projet avec attention 
+                                            aux détails et respect de vos attentes.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%;">
+                                                <span class="text-white fw-bold" style="font-size: 2rem;">3</span>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Livraison</h4>
+                                        <p class="text-muted">
+                                            Nous respectons vos délais et livrons un produit fini de qualité 
+                                            supérieure, prêt à être utilisé.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Call to Action -->
+                    <section class="s_call_to_action pt-5 pb-5" data-vcss="001" data-snippet="s_call_to_action" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h2 class="display-5 fw-bold text-white mb-4">Besoin d'un Devis Personnalisé ?</h2>
+                                    <p class="lead text-white mb-5 fs-4">
+                                        Contactez-nous pour discuter de votre projet et obtenir un devis gratuit et sans engagement.
+                                    </p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <a href="/contactus" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-envelope me-2"></i>Demander un Devis Gratuit
+                                        </a>
+                                        <a href="tel:+15555555556" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-phone me-2"></i>Nous Appeler
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Template pour la page About Us personnalisée - NexPrint Studio -->
+    <template id="about_us_page_template" name="À propos - NexPrint Studio">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!-- Section Hero About Us -->
+                <div class="oe_structure">
+                    <section class="s_cover parallax s_parallax_is_fixed bg-black-50" data-vcss="001" data-snippet="s_cover" data-scroll-background-ratio="1" style="min-height: 500px;">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter bg-black-50"/>
+                        <div class="container d-flex align-items-center" style="min-height: 500px;">
+                            <div class="row w-100">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h1 class="display-3 fw-bold text-white mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                        À propos de NexPrint Studio
+                                    </h1>
+                                    <p class="lead text-white fs-4 mb-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                                        Votre partenaire de confiance en communication visuelle et impression professionnelle
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Contenu principal -->
+                <div class="oe_structure">
+                    <!-- Section Notre Histoire -->
+                    <section class="s_text_block pt-5 pb-5" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h2 class="display-5 fw-bold mb-4 text-primary">Notre Histoire</h2>
+                                    <p class="lead fs-5 mb-4">
+                                        <strong>NexPrint Studio</strong> est une société spécialisée dans la 
+                                        <strong>communication visuelle</strong>, l'<strong>impression</strong> et la 
+                                        <strong>gravure publicitaire</strong>. Nous sommes passionnés par la création 
+                                        et l'innovation dans le domaine de l'impression et de la communication visuelle.
+                                    </p>
+                                    <p class="fs-5 mb-4">
+                                        Depuis notre création, nous nous engageons à offrir des solutions de qualité supérieure 
+                                        pour tous vos besoins en communication visuelle. Notre expertise couvre un large éventail 
+                                        de services incluant les <strong>goodies</strong>, la <strong>signalétique</strong>, 
+                                        le <strong>textile</strong>, le <strong>marquage</strong>, la <strong>sublimation</strong>, 
+                                        l'<strong>impression UV</strong>, la <strong>découpe CNC</strong> et la 
+                                        <strong>gravure laser</strong>.
+                                    </p>
+                                    <p class="fs-5 mb-4">
+                                        Nous combinons technologie de pointe, savoir-faire artisanal et service client exceptionnel 
+                                        pour vous accompagner dans tous vos projets, du concept à la livraison finale.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Nos Valeurs -->
+                    <section class="s_features_grid pt-5 pb-5 bg-light" data-vcss="001" data-snippet="s_features_grid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center mb-5">
+                                    <h2 class="display-5 fw-bold mb-3 text-primary">Nos Valeurs</h2>
+                                    <p class="lead fs-5">Les principes qui guident notre travail au quotidien</p>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 50%;">
+                                                <i class="fa fa-trophy fa-3x text-white"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Excellence</h4>
+                                        <p class="text-muted">
+                                            Nous visons l'excellence dans chaque projet, en utilisant des équipements de dernière 
+                                            génération et des matériaux de qualité supérieure pour garantir des résultats exceptionnels.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); border-radius: 50%;">
+                                                <i class="fa fa-users fa-3x text-white"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Service Client</h4>
+                                        <p class="text-muted">
+                                            Votre satisfaction est notre priorité. Notre équipe dédiée vous accompagne de la 
+                                            conception à la livraison avec professionnalisme et attention aux détails.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                                        <div class="mb-4">
+                                            <div class="d-inline-flex align-items-center justify-content-center" style="width: 100px; height: 100px; background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); border-radius: 50%;">
+                                                <i class="fa fa-lightbulb-o fa-3x text-white"></i>
+                                            </div>
+                                        </div>
+                                        <h4 class="fw-bold mb-3">Innovation</h4>
+                                        <p class="text-muted">
+                                            Nous restons à la pointe de la technologie pour vous offrir les solutions les plus 
+                                            innovantes et performantes en communication visuelle et impression.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Notre Mission -->
+                    <section class="s_text_block pt-5 pb-5 bg-light" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto">
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-6 mb-4 mb-lg-0">
+                                            <h2 class="display-5 fw-bold mb-4 text-primary">Notre Mission</h2>
+                                            <p class="fs-5 mb-4">
+                                                Chez <strong>NexPrint Studio</strong>, notre mission est de transformer vos idées 
+                                                en réalisations concrètes grâce à notre expertise en communication visuelle et impression. 
+                                                Nous nous engageons à fournir des solutions innovantes et de qualité supérieure qui 
+                                                renforcent votre identité de marque et votre présence sur le marché.
+                                            </p>
+                                            <p class="fs-5 mb-4">
+                                                Que ce soit pour de la <strong>signalétique</strong>, des <strong>goodies personnalisés</strong>, 
+                                                de l'<strong>impression textile</strong> ou de la <strong>gravure publicitaire</strong>, 
+                                                nous mettons notre savoir-faire à votre service pour créer des produits qui vous ressemblent.
+                                            </p>
+                                            <div class="d-flex flex-column flex-sm-row gap-3">
+                                                <a href="/contactus" class="btn btn-primary btn-lg px-4">
+                                                    <i class="fa fa-envelope me-2"></i>Contactez-nous
+                                                </a>
+                                                <a href="/nos-services" class="btn btn-outline-primary btn-lg px-4">
+                                                    <i class="fa fa-arrow-right me-2"></i>Découvrir Nos Services
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="row g-3">
+                                                <div class="col-6">
+                                                    <div class="text-center p-4" style="background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                                        <i class="fa fa-print fa-3x text-primary mb-3"></i>
+                                                        <h6 class="fw-bold">Impression</h6>
+                                                        <p class="text-muted small mb-0">Haute qualité</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="text-center p-4" style="background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                                        <i class="fa fa-bolt fa-3x text-primary mb-3"></i>
+                                                        <h6 class="fw-bold">Gravure</h6>
+                                                        <p class="text-muted small mb-0">Précision laser</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="text-center p-4" style="background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                                        <i class="fa fa-eye fa-3x text-primary mb-3"></i>
+                                                        <h6 class="fw-bold">Communication</h6>
+                                                        <p class="text-muted small mb-0">Visuelle</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6">
+                                                    <div class="text-center p-4" style="background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                                                        <i class="fa fa-gift fa-3x text-primary mb-3"></i>
+                                                        <h6 class="fw-bold">Goodies</h6>
+                                                        <p class="text-muted small mb-0">Personnalisés</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Notre Équipe -->
+                    <section class="s_text_block pt-5 pb-5" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h2 class="display-5 fw-bold mb-4 text-primary">Notre Équipe</h2>
+                                    <p class="fs-5 mb-4">
+                                        Notre équipe de professionnels expérimentés combine expertise technique et passion 
+                                        pour la création. Chaque membre apporte ses compétences uniques en 
+                                        <strong>impression</strong>, <strong>gravure</strong>, <strong>textile</strong> et 
+                                        <strong>communication visuelle</strong> pour vous offrir un service complet et personnalisé.
+                                    </p>
+                                    <p class="fs-5 mb-4">
+                                        Que vous ayez besoin d'un projet simple ou d'une campagne complexe, notre équipe 
+                                        est là pour transformer vos idées en réalité avec précision et créativité. Nous 
+                                        travaillons en étroite collaboration avec vous pour comprendre vos besoins et 
+                                        vous proposer les meilleures solutions.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Pourquoi Nous Choisir -->
+                    <section class="s_three_columns pt-5 pb-5 bg-light" data-vcss="001" data-snippet="s_three_columns">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center mb-5">
+                                    <h2 class="display-5 fw-bold mb-3 text-primary">Pourquoi Choisir NexPrint Studio ?</h2>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-check-circle fa-3x text-primary"></i>
+                                        </div>
+                                        <h5 class="fw-bold mb-3">Qualité Garantie</h5>
+                                        <p class="text-muted small">
+                                            Matériaux de qualité supérieure et équipements de dernière génération
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-clock-o fa-3x text-primary"></i>
+                                        </div>
+                                        <h5 class="fw-bold mb-3">Délais Respectés</h5>
+                                        <p class="text-muted small">
+                                            Engagement ferme sur les délais, même pour les projets urgents
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-cogs fa-3x text-primary"></i>
+                                        </div>
+                                        <h5 class="fw-bold mb-3">Technologie Avancée</h5>
+                                        <p class="text-muted small">
+                                            Équipements modernes pour des résultats professionnels exceptionnels
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="text-center p-4">
+                                        <div class="mb-3">
+                                            <i class="fa fa-handshake-o fa-3x text-primary"></i>
+                                        </div>
+                                        <h5 class="fw-bold mb-3">Accompagnement</h5>
+                                        <p class="text-muted small">
+                                            Conseil personnalisé et suivi de A à Z pour chaque projet
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Call to Action -->
+                    <section class="s_call_to_action pt-5 pb-5" data-vcss="001" data-snippet="s_call_to_action" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h2 class="display-5 fw-bold text-white mb-4">Prêt à Travailler Avec Nous ?</h2>
+                                    <p class="lead text-white mb-5 fs-4">
+                                        Découvrez comment NexPrint Studio peut transformer vos projets de communication visuelle.
+                                    </p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <a href="/contactus" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-envelope me-2"></i>Demander un Devis Gratuit
+                                        </a>
+                                        <a href="/nos-services" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-arrow-right me-2"></i>Découvrir Nos Services
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Template pour la page Contact personnalisée - NexPrint Studio -->
+    <template id="contact_page_template" name="Contact - NexPrint Studio">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!-- Section Hero Contact -->
+                <div class="oe_structure">
+                    <section class="s_cover parallax s_parallax_is_fixed bg-black-50" data-vcss="001" data-snippet="s_cover" data-scroll-background-ratio="1" style="min-height: 500px;">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter bg-black-50"/>
+                        <div class="container d-flex align-items-center" style="min-height: 500px;">
+                            <div class="row w-100">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h1 class="display-3 fw-bold text-white mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                        Contactez-nous
+                                    </h1>
+                                    <p class="lead text-white fs-4 mb-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                                        Nous sommes là pour répondre à toutes vos questions et vous accompagner dans vos projets
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Contenu principal -->
+                <div class="oe_structure">
+                    <!-- Section Contact Info et Formulaire -->
+                    <section class="s_text_block pt-5 pb-5" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-4 mb-5 mb-lg-0">
+                                    <h2 class="display-6 fw-bold mb-4 text-primary">Nos Coordonnées</h2>
+                                    <div class="mb-4">
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="me-3">
+                                                <i class="fa fa-map-marker fa-2x text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Adresse</h5>
+                                                <p class="text-muted mb-0">
+                                                    NexPrint Studio<br/>
+                                                    Communication Visuelle &amp; Impression<br/>
+                                                    Votre adresse ici
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="me-3">
+                                                <i class="fa fa-phone fa-2x text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Téléphone</h5>
+                                                <p class="text-muted mb-0">
+                                                    <a href="tel:+15555555556" class="text-decoration-none">+1 555-555-5556</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start mb-3">
+                                            <div class="me-3">
+                                                <i class="fa fa-envelope fa-2x text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Email</h5>
+                                                <p class="text-muted mb-0">
+                                                    <a href="mailto:contact@nexprintstudio.com" class="text-decoration-none">contact@nexprintstudio.com</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex align-items-start">
+                                            <div class="me-3">
+                                                <i class="fa fa-clock-o fa-2x text-primary"></i>
+                                            </div>
+                                            <div>
+                                                <h5 class="fw-bold mb-1">Horaires</h5>
+                                                <p class="text-muted mb-0">
+                                                    Lundi - Vendredi : 9h00 - 18h00<br/>
+                                                    Samedi : 9h00 - 13h00<br/>
+                                                    Dimanche : Fermé
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4">
+                                        <h5 class="fw-bold mb-3">Suivez-nous</h5>
+                                        <div class="d-flex gap-3">
+                                            <a href="#" class="text-primary" style="font-size: 1.5rem;"><i class="fa fa-facebook"></i></a>
+                                            <a href="#" class="text-primary" style="font-size: 1.5rem;"><i class="fa fa-twitter"></i></a>
+                                            <a href="#" class="text-primary" style="font-size: 1.5rem;"><i class="fa fa-linkedin"></i></a>
+                                            <a href="#" class="text-primary" style="font-size: 1.5rem;"><i class="fa fa-instagram"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8">
+                                    <h2 class="display-6 fw-bold mb-4 text-primary">Envoyez-nous un message</h2>
+                                    <p class="mb-4">
+                                        Remplissez le formulaire ci-dessous et notre équipe vous répondra dans les plus brefs délais. 
+                                        Pour une demande urgente, n'hésitez pas à nous appeler directement.
+                                    </p>
+                                    <!-- Formulaire de contact personnalisé -->
+                                    <section class="s_website_form" data-vcss="001" data-snippet="s_website_form">
+                                        <form id="contactus_form" action="/website/form/" method="post" enctype="multipart/form-data" class="o_mark_required" data-mark="*" data-model_name="mail.mail" data-success-mode="redirect" data-success-page="/contactus-thank-you">
+                                            <input type="hidden" name="email_to" t-att-value="res_company.email"/>
+                                            <div class="row g-3">
+                                                <div class="col-md-6">
+                                                    <label for="contact_name" class="form-label">Nom <span class="text-danger">*</span></label>
+                                                    <input id="contact_name" type="text" class="form-control" name="name" required="" placeholder="Votre nom"/>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="contact_phone" class="form-label">Téléphone</label>
+                                                    <input id="contact_phone" type="tel" class="form-control" name="phone" placeholder="Votre numéro de téléphone"/>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="contact_email" class="form-label">Email <span class="text-danger">*</span></label>
+                                                    <input id="contact_email" type="email" class="form-control" name="email_from" required="" placeholder="votre@email.com"/>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label for="contact_company" class="form-label">Entreprise</label>
+                                                    <input id="contact_company" type="text" class="form-control" name="company" placeholder="Votre entreprise"/>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="contact_subject" class="form-label">Sujet <span class="text-danger">*</span></label>
+                                                    <input id="contact_subject" type="text" class="form-control" name="subject" required="" placeholder="Sujet de votre message"/>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label for="contact_message" class="form-label">Message <span class="text-danger">*</span></label>
+                                                    <textarea id="contact_message" class="form-control" name="description" rows="6" required="" placeholder="Votre message..."></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary btn-lg px-5">
+                                                        <i class="fa fa-paper-plane me-2"></i>Envoyer le message
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Services Rapides -->
+                    <section class="s_features_grid pt-5 pb-5 bg-light" data-vcss="001" data-snippet="s_features_grid">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-12 text-center mb-5">
+                                    <h2 class="display-5 fw-bold mb-3 text-primary">Besoin d'un Devis Rapide ?</h2>
+                                    <p class="lead fs-5">Contactez-nous pour discuter de votre projet</p>
+                                </div>
+                            </div>
+                            <div class="row g-4">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                                        <i class="fa fa-print fa-3x text-primary mb-3"></i>
+                                        <h5 class="fw-bold mb-3">Impression</h5>
+                                        <p class="text-muted small">
+                                            Devis gratuit pour tous vos projets d'impression
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                                        <i class="fa fa-bolt fa-3x text-primary mb-3"></i>
+                                        <h5 class="fw-bold mb-3">Gravure</h5>
+                                        <p class="text-muted small">
+                                            Consultation gratuite pour vos projets de gravure
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="card h-100 shadow-sm border-0 text-center p-4">
+                                        <i class="fa fa-gift fa-3x text-primary mb-3"></i>
+                                        <h5 class="fw-bold mb-3">Goodies</h5>
+                                        <p class="text-muted small">
+                                            Personnalisation d'objets publicitaires sur mesure
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <!-- Template Footer personnalisé - NexPrint Studio -->
+    <template id="footer_nexprint" name="Footer NexPrint Studio" inherit_id="website.layout">
+        <xpath expr="//div[@id='footer']" position="replace">
+            <div id="footer" class="oe_structure oe_structure_solo" t-ignore="true" t-if="not no_footer">
+                <section class="s_text_block pt-5 pb-4" data-snippet="s_text_block" style="background: #2c3e50;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                                <h5 class="text-white mb-3 fw-bold">NexPrint Studio</h5>
+                                <p class="text-white-50 mb-3">
+                                    Votre partenaire de confiance en communication visuelle, impression professionnelle et gravure publicitaire.
+                                </p>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-white" style="font-size: 1.2rem;"><i class="fa fa-facebook"></i></a>
+                                    <a href="#" class="text-white" style="font-size: 1.2rem;"><i class="fa fa-twitter"></i></a>
+                                    <a href="#" class="text-white" style="font-size: 1.2rem;"><i class="fa fa-linkedin"></i></a>
+                                    <a href="#" class="text-white" style="font-size: 1.2rem;"><i class="fa fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                                <h5 class="text-white mb-3 fw-bold">Liens Utiles</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="/" class="text-white-50 text-decoration-none">Accueil</a></li>
+                                    <li class="mb-2"><a href="/about-us" class="text-white-50 text-decoration-none">À propos</a></li>
+                                    <li class="mb-2"><a href="/nos-services" class="text-white-50 text-decoration-none">Nos Services</a></li>
+                                    <li class="mb-2"><a href="/contactus" class="text-white-50 text-decoration-none">Contact</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                                <h5 class="text-white mb-3 fw-bold">Nos Services</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><a href="/nos-services" class="text-white-50 text-decoration-none">Communication Visuelle</a></li>
+                                    <li class="mb-2"><a href="/nos-services" class="text-white-50 text-decoration-none">Impression</a></li>
+                                    <li class="mb-2"><a href="/nos-services" class="text-white-50 text-decoration-none">Gravure Publicitaire</a></li>
+                                    <li class="mb-2"><a href="/nos-services" class="text-white-50 text-decoration-none">Goodies &amp; Textile</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <h5 class="text-white mb-3 fw-bold">Contactez-nous</h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2 text-white-50">
+                                        <i class="fa fa-map-marker me-2"></i>
+                                        NexPrint Studio<br/>
+                                        <span class="ms-4">Votre adresse ici</span>
+                                    </li>
+                                    <li class="mb-2 text-white-50">
+                                        <i class="fa fa-phone me-2"></i>
+                                        <a href="tel:+15555555556" class="text-white-50 text-decoration-none">+1 555-555-5556</a>
+                                    </li>
+                                    <li class="mb-2 text-white-50">
+                                        <i class="fa fa-envelope me-2"></i>
+                                        <a href="mailto:contact@nexprintstudio.com" class="text-white-50 text-decoration-none">contact@nexprintstudio.com</a>
+                                    </li>
+                                    <li class="mb-2 text-white-50">
+                                        <i class="fa fa-clock-o me-2"></i>
+                                        Lun-Ven: 9h-18h | Sam: 9h-13h
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Template Copyright personnalisé - NexPrint Studio -->
+    <template id="footer_copyright_nexprint" name="Footer Copyright NexPrint Studio" inherit_id="website.layout">
+        <xpath expr="//div[hasclass('o_footer_copyright')]" position="replace">
+            <div class="o_footer_copyright text-center py-3" style="background: #1a252f;">
+                <div class="container">
+                    <span class="text-white-50">
+                        &amp;copy; <t t-esc="datetime.datetime.now().year"/> NexPrint Studio. Tous droits réservés. | 
+                        <a href="#" class="text-white-50 text-decoration-none">Mentions légales</a> | 
+                        <a href="#" class="text-white-50 text-decoration-none">Politique de confidentialité</a>
+                    </span>
+                </div>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- Template pour masquer les menus News et Pricing dans le header -->
+    <template id="hide_news_pricing_menu" name="Hide News and Pricing Menu" inherit_id="website.layout">
+        <!-- Filtrer les menus dans tous les headers -->
+        <xpath expr="//t[@t-foreach='website.menu_id.child_id' and @t-as='submenu']" position="replace">
+            <t t-foreach="website.menu_id.child_id.filtered(lambda m: m.is_visible and not (m.name and ('news' in m.name.lower() or 'blog' in m.name.lower() or 'pricing' in m.name.lower() or 'price' in m.name.lower())))" t-as="submenu">
+                <t t-call="website.submenu">
+                    <t t-set="item_class" t-valuef="nav-item"/>
+                    <t t-set="link_class" t-valuef="nav-link"/>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Template Catalogue Shop - NexPrint Studio -->
+    <template id="shop_catalogue_template" name="Catalogue - NexPrint Studio">
+        <t t-call="website.layout">
+            <div id="wrap">
+                <!-- Section Hero Shop -->
+                <div class="oe_structure">
+                    <section class="s_cover parallax s_parallax_is_fixed bg-black-50" data-vcss="001" data-snippet="s_cover" data-scroll-background-ratio="1" style="min-height: 400px;">
+                        <span class="s_parallax_bg oe_img_bg" style="background-image: url('/web/image/website.s_parallax_default_image'); background-position: 50% 0;"/>
+                        <div class="o_we_bg_filter bg-black-50"/>
+                        <div class="container d-flex align-items-center" style="min-height: 400px;">
+                            <div class="row w-100">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h1 class="display-3 fw-bold text-white mb-4" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                                        Catalogue NexPrint Studio
+                                    </h1>
+                                    <p class="lead text-white fs-4 mb-4" style="text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">
+                                        Produits et Services Complets - 130 Références Actives
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+                <!-- Contenu principal -->
+                <div class="oe_structure">
+                    <!-- Barre de tri et compteur -->
+                    <section class="s_text_block pt-4 pb-3 bg-light border-bottom" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <p class="mb-0 text-muted">
+                                        Affichage de <strong>1-<t t-esc="total_products"/></strong> sur <strong><t t-esc="total_products"/></strong> résultats
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <select id="sort-products" class="form-select d-inline-block" style="max-width: 200px;">
+                                        <option value="default">Tri par défaut</option>
+                                        <option value="name-asc">Nom (A-Z)</option>
+                                        <option value="name-desc">Nom (Z-A)</option>
+                                        <option value="price-asc">Prix (Croissant)</option>
+                                        <option value="price-desc">Prix (Décroissant)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <style>
+                        /* Styles pour les cartes produits */
+                        .product-card {
+                            transition: all 0.3s ease;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                        .product-card:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
+                        }
+                        .product-image-wrapper {
+                            position: relative;
+                            overflow: hidden;
+                        }
+                        .product-image-wrapper img {
+                            transition: transform 0.3s ease;
+                        }
+                        .product-card:hover .product-image-wrapper img {
+                            transform: scale(1.05);
+                        }
+                        /* Responsive */
+                        @media (max-width: 768px) {
+                            .product-card {
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    </style>
+
+                    <!-- Grille de tous les produits -->
+                    <section class="s_text_block pt-5 pb-5" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <!-- Grille de produits -->
+                            <div class="row g-4" id="products-grid">
+                                <t t-foreach="all_products" t-as="item">
+                                    <t t-set="product" t-value="item['product']"/>
+                                    <t t-set="product_variant_id" t-value="product._get_first_possible_variant_id()"/>
+                                    <div class="col-lg-3 col-md-4 col-sm-6 product-item" 
+                                         t-attf-data-category="#{item['category_key']}"
+                                         t-attf-data-name="#{product.name.lower()}"
+                                         t-attf-data-price="#{product.list_price}">
+                                        <div class="card h-100 product-card shadow-sm border-0" style="border-radius: 10px; overflow: hidden;">
+                                            <!-- Zone image produit (si disponible) -->
+                                            <div class="product-image-wrapper" style="height: 200px; background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+                                                <t t-if="product.image_1920">
+                                                    <img t-attf-src="/web/image/product.template/#{product.id}/image_1920" 
+                                                         t-attf-alt="#{product.name}"
+                                                         class="img-fluid" 
+                                                         style="max-height: 100%; max-width: 100%; object-fit: contain;"/>
+                                                </t>
+                                                <t t-else="">
+                                                    <div class="text-center p-4">
+                                                        <i t-attf-class="fa #{item['category_icon']} fa-4x text-muted"></i>
+                                                        <p class="text-muted small mt-2 mb-0"><t t-esc="item['category_name']"/></p>
+                                                    </div>
+                                                </t>
+                                                <!-- Badge catégorie -->
+                                                <div class="position-absolute top-0 start-0 m-2">
+                                                    <span class="badge bg-primary opacity-75">
+                                                        <t t-esc="item['category_name']"/>
+                                                    </span>
+                                                </div>
+                                                <!-- Badge type -->
+                                                <div class="position-absolute top-0 end-0 m-2">
+                                                    <t t-if="product.detailed_type == 'service'">
+                                                        <span class="badge bg-info">Service</span>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span class="badge bg-success">Produit</span>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="card-body d-flex flex-column p-3">
+                                                <!-- Référence -->
+                                                <div class="mb-2">
+                                                    <span class="badge bg-secondary small">
+                                                        <t t-esc="product.default_code or 'N/A'"/>
+                                                    </span>
+                                                </div>
+                                                
+                                                <!-- Nom produit -->
+                                                <h6 class="card-title fw-bold text-dark mb-2" style="min-height: 48px; line-height: 1.3; font-size: 0.95rem;">
+                                                    <t t-esc="product.name.split(' - ')[1] if ' - ' in product.name else product.name"/>
+                                                </h6>
+                                                
+                                                <!-- Prix -->
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-baseline justify-content-between">
+                                                        <span class="text-muted small">Prix TTC:</span>
+                                                        <span class="text-success fw-bold fs-5">
+                                                            <t t-out="product.list_price" t-options="{'widget': 'float', 'precision': 2}"/> 
+                                                            <small class="fs-6">TND</small>
+                                                        </span>
+                                                    </div>
+                                                    <t t-if="product.standard_price">
+                                                        <small class="text-muted">HT: <t t-out="product.standard_price" t-options="{'widget': 'float', 'precision': 2}"/> TND</small>
+                                                    </t>
+                                                </div>
+                                                
+                                                <!-- Actions -->
+                                                <div class="mt-auto">
+                                                    <a t-attf-href="/shop/#{product.id}" 
+                                                       class="btn btn-primary w-100 btn-sm py-2 fw-bold"
+                                                       style="border-radius: 6px; font-size: 0.9rem;">
+                                                        <i class="fa fa-eye me-1"></i>Voir détails
+                                                    </a>
+                                                    <t t-if="product._is_add_to_cart_possible()">
+                                                        <form action="/shop/cart/update" method="post" class="oe_product_cart mt-2">
+                                                            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                                                            <input type="hidden" name="product_id" t-att-value="product_variant_id"/>
+                                                            <input type="hidden" name="add_qty" value="1"/>
+                                                            <button type="submit" 
+                                                                    class="btn btn-success w-100 btn-sm py-2 fw-bold"
+                                                                    style="border-radius: 6px; font-size: 0.9rem;">
+                                                                <i class="fa fa-shopping-cart me-1"></i>Ajouter au panier
+                                                            </button>
+                                                        </form>
+                                                    </t>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                                
+                                <!-- Message si pas de produits -->
+                                <t t-if="not all_products or total_products == 0">
+                                    <div class="col-12">
+                                        <div class="alert alert-warning text-center py-5">
+                                            <i class="fa fa-info-circle fa-3x mb-3"></i>
+                                            <h5>Aucun produit disponible pour le moment.</h5>
+                                            <p class="mb-0">Contactez-nous pour plus d'informations.</p>
+                                        </div>
+                                    </div>
+                                </t>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <script>
+                        // Filtrage et tri des produits
+                        document.addEventListener('DOMContentLoaded', function() {
+                            const sortSelect = document.getElementById('sort-products');
+                            if (sortSelect) {
+                                sortSelect.addEventListener('change', function() {
+                                    const products = Array.from(document.querySelectorAll('.product-item'));
+                                    const container = document.getElementById('products-grid');
+                                    
+                                    products.sort(function(a, b) {
+                                        const value = this.value;
+                                        if (value === 'name-asc') {
+                                            return a.dataset.name.localeCompare(b.dataset.name);
+                                        } else if (value === 'name-desc') {
+                                            return b.dataset.name.localeCompare(a.dataset.name);
+                                        } else if (value === 'price-asc') {
+                                            return parseFloat(a.dataset.price) - parseFloat(b.dataset.price);
+                                        } else if (value === 'price-desc') {
+                                            return parseFloat(b.dataset.price) - parseFloat(a.dataset.price);
+                                        }
+                                        return 0;
+                                    }.bind(this));
+                                    
+                                    products.forEach(product => container.appendChild(product));
+                                });
+                            }
+                        });
+                    </script>
+
+                    <!-- Note importante -->
+                    <section class="s_text_block pt-4 pb-4 bg-light" data-vcss="001" data-snippet="s_text_block">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <div class="alert alert-info mb-0">
+                                        <h5 class="alert-heading"><i class="fa fa-info-circle me-2"></i>Catalogue Complet Disponible</h5>
+                                        <p class="mb-0">
+                                            Ce catalogue contient <strong>130 références actives</strong> réparties en 11 catégories : 
+                                            Sublimation (20), Goodies (14), Signalétique (16), Covering Véhicules (7), 
+                                            Impression (12), Gravure &amp; CNC (9), Décoration &amp; PLV (6), 
+                                            Textile &amp; Broderie (7), Cadeaux Personnalisés (6), 
+                                            Services Graphiques &amp; Installation (9), et Consommables Production (20).
+                                        </p>
+                                        <hr/>
+                                        <p class="mb-0">
+                                            <strong>Pour consulter le catalogue complet avec tous les produits et leurs prix détaillés, 
+                                            veuillez nous contacter.</strong> Tous les prix sont en TND (Tunisian Dinar) avec TVA 19% incluse.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Section Call to Action -->
+                    <section class="s_call_to_action pt-5 pb-5" data-vcss="001" data-snippet="s_call_to_action" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-lg-10 mx-auto text-center">
+                                    <h2 class="display-5 fw-bold text-white mb-4">Besoin d'un Devis Personnalisé ?</h2>
+                                    <p class="lead text-white mb-5 fs-4">
+                                        Contactez-nous pour discuter de votre projet et obtenir un devis gratuit avec le catalogue complet.
+                                    </p>
+                                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                                        <a href="/contactus" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-envelope me-2"></i>Demander un Devis
+                                        </a>
+                                        <a href="/nos-services" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold">
+                                            <i class="fa fa-arrow-right me-2"></i>Nos Services
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </t>
+    </template>
+</odoo>
