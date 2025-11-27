@@ -1,7 +1,10 @@
 # -*- coding: utf-8 -*-
 
+import logging
 from odoo import http
 from odoo.http import request
+
+_logger = logging.getLogger(__name__)
 
 
 class ServicesController(http.Controller):
@@ -31,6 +34,42 @@ class ServicesController(http.Controller):
         """Redirige les pages News et Pricing vers la page d'accueil (pages supprimées)"""
         return request.redirect('/')
     
+    @http.route('/shop/update-menus', type='http', auth="user", website=True)
+    def update_menus_route(self, **kw):
+        """Route pour forcer la mise à jour des menus Shop"""
+        try:
+            from odoo.addons.NXPSTudion.hooks import create_shop_menu
+            create_shop_menu(request.env)
+            
+            # Afficher les menus pour vérification
+            website = request.env['website'].get_current_website()
+            root_menu = website.menu_id
+            shop_menu = request.env['website.menu'].search([
+                ('name', '=', 'Shop'),
+                ('parent_id', '=', root_menu.id if root_menu else False),
+            ], limit=1)
+            
+            menu_info = []
+            if shop_menu:
+                for child in shop_menu.child_id:
+                    menu_info.append(f"{child.name}: {child.url}")
+            
+            return f"""
+            <html>
+            <body>
+                <h1>Menus mis à jour avec succès!</h1>
+                <h2>Menus Shop:</h2>
+                <ul>
+                    {'<br>'.join([f'<li>{m}</li>' for m in menu_info]) if menu_info else '<li>Aucun sous-menu</li>'}
+                </ul>
+                <p><a href="/shop">Retour au shop</a></p>
+            </body>
+            </html>
+            """
+        except Exception as e:
+            _logger.error(f"Erreur mise à jour menus: {e}", exc_info=True)
+            return f"<html><body><h1>Erreur: {str(e)}</h1></body></html>"
+    
     @http.route('/shop/create-products', type='http', auth="user", website=True)
     def create_products_route(self, **kw):
         """Route pour forcer la création des produits (admin seulement)"""
@@ -48,43 +87,134 @@ class ServicesController(http.Controller):
     @http.route(['/shop', '/boutique'], type='http', auth="public", website=True, sitemap=True)
     def shop_page(self, **kw):
         """Page catalogue Shop NexPrint Studio - Remplace la page par défaut"""
-        # S'assurer que le menu Shop existe
+        # Mettre à jour automatiquement les menus Shop (vérification intelligente)
         try:
             from odoo.addons.NXPSTudion.hooks import create_shop_menu
             website = request.env['website'].get_current_website()
             root_menu = website.menu_id
             
-            # Vérifier si le menu Shop existe
+            # Vérifier rapidement si une mise à jour est nécessaire
             shop_menu = request.env['website.menu'].search([
                 ('name', '=', 'Shop'),
                 ('parent_id', '=', root_menu.id if root_menu else False),
-                '|',
-                ('website_id', '=', False),
-                ('website_id', '=', website.id),
             ], limit=1)
             
-            # Si le menu n'existe pas, le créer
-            if not shop_menu:
+            needs_update = False
+            if shop_menu:
+                # Vérifier si des menus utilisent encore des hashs (#) au lieu de paramètres (?)
+                for child in shop_menu.child_id:
+                    if child.url and child.url.startswith('/shop#'):
+                        needs_update = True
+                        break
+                    # Vérifier aussi si le nombre de catégories correspond
+                    catalogue_data_model = request.env['nexprint.catalogue.data']
+                    categories_info = catalogue_data_model.get_categories_info()
+                    if len(shop_menu.child_id) != len(categories_info):
+                        needs_update = True
+                        break
+            else:
+                needs_update = True
+            
+            # Mettre à jour seulement si nécessaire
+            if needs_update:
                 create_shop_menu(request.env)
         except Exception as e:
-            import logging
-            _logger = logging.getLogger(__name__)
-            _logger.warning(f"Erreur vérification menu Shop: {e}")
+            _logger.warning(f"Erreur mise à jour automatique menu Shop: {e}")
         
-        # Forcer la création des produits si nécessaire (seulement si pas de produits)
+        # Vérifier et créer/mettre à jour les produits automatiquement
         total_products = request.env['product.template'].search_count([
             ('website_published', '=', True),
             ('sale_ok', '=', True),
         ])
         
-        if total_products == 0:
-            try:
-                from odoo.addons.NXPSTudion.hooks import create_catalogue_products
+        try:
+            from odoo.addons.NXPSTudion.hooks import create_catalogue_products
+            catalogue_data_model = request.env['nexprint.catalogue.data']
+            products_with_variants = catalogue_data_model.get_products_with_variants()
+            
+            # Vérifier s'il y a des doublons dans les catégories
+            has_duplicates = False
+            categories_info = catalogue_data_model.get_categories_info()
+            for cat_key, cat_info in categories_info.items():
+                category = request.env['product.category'].search([
+                    ('name', '=', cat_info['name'])
+                ], limit=1)
+                if category:
+                    # Compter les produits par référence
+                    products = request.env['product.template'].search([
+                        ('categ_id', '=', category.id),
+                    ])
+                    refs = {}
+                    for product in products:
+                        ref = product.default_code or 'NO_REF'
+                        refs[ref] = refs.get(ref, 0) + 1
+                        if refs[ref] > 1:
+                            has_duplicates = True
+                            break
+                if has_duplicates:
+                    break
+            
+            # Vérifier si des anciens produits avec variantes existent encore (à convertir)
+            needs_update = False
+            for base_name, variants in products_with_variants.items():
+                for variant_data in variants:
+                    old_product = request.env['product.template'].search([
+                        ('default_code', '=', variant_data['ref']),
+                        ('name', 'ilike', variant_data['desc']),
+                    ], limit=1)
+                    if old_product:
+                        needs_update = True
+                        break
+                if needs_update:
+                    break
+            
+            # Vérifier aussi si le produit template avec variantes n'existe pas
+            if not needs_update:
+                for base_name, variants in products_with_variants.items():
+                    first_variant = variants[0]
+                    # Trouver la catégorie
+                    cat_key = None
+                    catalogue_data = catalogue_data_model.get_catalogue_data()
+                    for ck, products in catalogue_data.items():
+                        for p in products:
+                            if p['ref'] == first_variant['ref']:
+                                cat_key = ck
+                                break
+                        if cat_key:
+                            break
+                    
+                    if cat_key:
+                        category = request.env['product.category'].search([
+                            ('name', '=', catalogue_data_model.get_categories_info()[cat_key]['name'])
+                        ], limit=1)
+                        if category:
+                            product_template = request.env['product.template'].search([
+                                ('name', '=', base_name),
+                                ('categ_id', '=', category.id),
+                            ], limit=1)
+                            if not product_template:
+                                needs_update = True
+                                break
+            
+            # Si nécessaire, mettre à jour les produits
+            if needs_update or has_duplicates:
+                if has_duplicates:
+                    _logger.info("🔄 Nettoyage automatique des doublons...")
+                if needs_update:
+                    _logger.info("🔄 Mise à jour automatique des produits avec variantes...")
+                create_catalogue_products(request.env, force_recreate=False)
+                total_products = request.env['product.template'].search_count([
+                    ('website_published', '=', True),
+                    ('sale_ok', '=', True),
+                ])
+            elif total_products == 0:
                 create_catalogue_products(request.env)
-            except Exception as e:
-                import logging
-                _logger = logging.getLogger(__name__)
-                _logger.error(f"Erreur création produits: {e}")
+                total_products = request.env['product.template'].search_count([
+                    ('website_published', '=', True),
+                    ('sale_ok', '=', True),
+                ])
+        except Exception as e:
+            _logger.error(f"Erreur création/mise à jour produits: {e}")
         
         # Récupérer les produits depuis Odoo
         products_by_category = {}
@@ -116,8 +246,6 @@ class ServicesController(http.Controller):
                 # Si le nombre de produits est inférieur au nombre attendu, créer les produits manquants
                 if products_count < expected_count:
                     missing_products = True
-                    import logging
-                    _logger = logging.getLogger(__name__)
                     _logger.info(f"Catégorie {cat_name}: {products_count}/{expected_count} produits - Création automatique des produits manquants")
                     break
             else:
@@ -128,17 +256,12 @@ class ServicesController(http.Controller):
         # Si des produits manquent, forcer la création de tous les produits
         if missing_products:
             try:
-                import logging
-                _logger = logging.getLogger(__name__)
                 _logger.info("Détection de produits manquants - Création automatique en cours...")
                 from odoo.addons.NXPSTudion.hooks import create_catalogue_products
                 create_catalogue_products(request.env)
-                # Invalider le cache des vues pour forcer le rechargement
                 request.env.registry.clear_cache()
                 _logger.info("Création automatique des produits terminée")
             except Exception as e:
-                import logging
-                _logger = logging.getLogger(__name__)
                 _logger.error(f"Erreur création produits: {e}", exc_info=True)
         
         # Récupérer les produits par catégorie
@@ -188,11 +311,30 @@ class ServicesController(http.Controller):
         # Calculer le total de produits
         total_products = len(all_products)
         
+        # Récupérer le paramètre de catégorie depuis l'URL
+        selected_category = ''
+        if hasattr(request, 'httprequest') and hasattr(request.httprequest, 'args'):
+            selected_category = request.httprequest.args.get('category', '') or ''
+        if not selected_category and 'category' in kw:
+            selected_category = kw.get('category', '') or ''
+        if not selected_category and hasattr(request, 'params'):
+            selected_category = request.params.get('category', '') or ''
+        if selected_category:
+            selected_category = str(selected_category).strip()
+        
+        # Filtrer les produits si une catégorie est sélectionnée
+        filtered_products = all_products
+        if selected_category and selected_category in categories_info:
+            filtered_products = [p for p in all_products if p.get('category_key') == selected_category]
+            total_products = len(filtered_products)
+        
         return request.render('NXPSTudion.shop_catalogue_template', {
             'products_by_category': products_by_category,
             'categories_info': categories_info,
             'categories_list': categories_list,
             'all_products': all_products,  # Tous les produits pour l'affichage en grille
+            'filtered_products': filtered_products,  # Produits filtrés selon la catégorie
             'total_products': total_products,
+            'selected_category': selected_category,  # Catégorie actuellement sélectionnée
         })
 

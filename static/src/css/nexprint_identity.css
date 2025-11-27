@@ -1,0 +1,312 @@
+/* NexPrint Studio - Identité Visuelle */
+/* Couleurs principales de l'identité visuelle */
+
+:root {
+  /* Couleurs principales */
+  --nexprint-dark-blue: #1a3a5f; /* Bleu foncé - Professionnalisme */
+  --nexprint-red: #dc3545; /* Rouge - Créativité */
+  --nexprint-teal: #2d7a7a; /* Vert/Teal foncé - Innovation */
+
+  /* Couleurs secondaires */
+  --nexprint-blue-light: #2c5f8f;
+  --nexprint-red-light: #e85d6d;
+  --nexprint-teal-light: #4a9a9a;
+
+  /* Couleurs de texte */
+  --nexprint-text-dark: #1a3a5f;
+  --nexprint-text-light: #ffffff;
+}
+
+/* Classes utilitaires pour les couleurs de l'identité */
+.nexprint-bg-dark-blue {
+  background-color: var(--nexprint-dark-blue) !important;
+}
+
+.nexprint-bg-red {
+  background-color: var(--nexprint-red) !important;
+}
+
+.nexprint-bg-teal {
+  background-color: var(--nexprint-teal) !important;
+}
+
+.nexprint-text-dark-blue {
+  color: var(--nexprint-dark-blue) !important;
+}
+
+.nexprint-text-red {
+  color: var(--nexprint-red) !important;
+}
+
+.nexprint-text-teal {
+  color: var(--nexprint-teal) !important;
+}
+
+/* Boutons avec l'identité visuelle */
+.btn-nexprint-primary {
+  background-color: var(--nexprint-dark-blue);
+  border-color: var(--nexprint-dark-blue);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-nexprint-primary:hover {
+  background-color: var(--nexprint-blue-light);
+  border-color: var(--nexprint-blue-light);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(26, 58, 95, 0.3);
+}
+
+.btn-nexprint-creative {
+  background-color: var(--nexprint-red);
+  border-color: var(--nexprint-red);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-nexprint-creative:hover {
+  background-color: var(--nexprint-red-light);
+  border-color: var(--nexprint-red-light);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+}
+
+.btn-nexprint-innovation {
+  background-color: var(--nexprint-teal);
+  border-color: var(--nexprint-teal);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-nexprint-innovation:hover {
+  background-color: var(--nexprint-teal-light);
+  border-color: var(--nexprint-teal-light);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(45, 122, 122, 0.3);
+}
+
+/* Badges de valeurs */
+.nexprint-value-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0.25rem;
+}
+
+.nexprint-value-professional {
+  background-color: rgba(26, 58, 95, 0.1);
+  color: var(--nexprint-dark-blue);
+  border: 2px solid var(--nexprint-dark-blue);
+}
+
+.nexprint-value-creative {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--nexprint-red);
+  border: 2px solid var(--nexprint-red);
+}
+
+.nexprint-value-innovation {
+  background-color: rgba(45, 122, 122, 0.1);
+  color: var(--nexprint-teal);
+  border: 2px solid var(--nexprint-teal);
+}
+
+/* Tagline styling */
+.nexprint-tagline {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--nexprint-dark-blue);
+  letter-spacing: 1px;
+  margin: 1rem 0;
+}
+
+.nexprint-tagline-white {
+  font-style: italic;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards avec les couleurs de l'identité */
+.nexprint-card-professional {
+  border-top: 4px solid var(--nexprint-dark-blue);
+  transition: all 0.3s ease;
+}
+
+.nexprint-card-professional:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(26, 58, 95, 0.2);
+}
+
+.nexprint-card-creative {
+  border-top: 4px solid var(--nexprint-red);
+  transition: all 0.3s ease;
+}
+
+.nexprint-card-creative:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(220, 53, 69, 0.2);
+}
+
+.nexprint-card-innovation {
+  border-top: 4px solid var(--nexprint-teal);
+  transition: all 0.3s ease;
+}
+
+.nexprint-card-innovation:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(45, 122, 122, 0.2);
+}
+
+/* Icônes avec les couleurs */
+.nexprint-icon-professional {
+  color: var(--nexprint-dark-blue);
+}
+
+.nexprint-icon-creative {
+  color: var(--nexprint-red);
+}
+
+.nexprint-icon-innovation {
+  color: var(--nexprint-teal);
+}
+
+/* Section trois univers */
+.nexprint-univers-section {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 58, 95, 0.05) 0%,
+    rgba(220, 53, 69, 0.05) 50%,
+    rgba(45, 122, 122, 0.05) 100%
+  );
+  padding: 4rem 0;
+}
+
+.nexprint-univers-card {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.nexprint-univers-card:hover {
+  transform: translateY(-10px);
+}
+
+.nexprint-univers-publicite {
+  background: linear-gradient(
+    135deg,
+    rgba(26, 58, 95, 0.1),
+    rgba(26, 58, 95, 0.05)
+  );
+  border: 2px solid var(--nexprint-dark-blue);
+}
+
+.nexprint-univers-signaletique {
+  background: linear-gradient(
+    135deg,
+    rgba(220, 53, 69, 0.1),
+    rgba(220, 53, 69, 0.05)
+  );
+  border: 2px solid var(--nexprint-red);
+}
+
+.nexprint-univers-impression {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 122, 122, 0.1),
+    rgba(45, 122, 122, 0.05)
+  );
+  border: 2px solid var(--nexprint-teal);
+}
+
+/* Override des couleurs Bootstrap primary */
+.text-primary {
+  color: var(--nexprint-dark-blue) !important;
+}
+
+.btn-primary {
+  background-color: var(--nexprint-dark-blue);
+  border-color: var(--nexprint-dark-blue);
+}
+
+.btn-primary:hover {
+  background-color: var(--nexprint-blue-light);
+  border-color: var(--nexprint-blue-light);
+}
+
+.btn-danger {
+  background-color: var(--nexprint-red);
+  border-color: var(--nexprint-red);
+}
+
+.btn-danger:hover {
+  background-color: var(--nexprint-red-light);
+  border-color: var(--nexprint-red-light);
+}
+
+/* Logo dans la navbar - Taille augmentée */
+.navbar-brand.logo {
+  padding: 0.5rem 1rem !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar-brand.logo img,
+.navbar-brand.logo span[role="img"],
+.navbar-brand.logo span[role="img"] img {
+  max-height: 60px !important;
+  height: 60px !important;
+  width: auto !important;
+  object-fit: contain !important;
+}
+
+/* Correction pour le span qui contient l'image */
+.navbar-brand.logo span[role="img"] {
+  display: inline-block !important;
+  line-height: 0 !important;
+}
+
+/* Logo en mode scrollé (si header fixe) */
+.o_header_fixed .navbar-brand.logo img,
+.o_header_fixed .navbar-brand.logo span[role="img"],
+.o_header_fixed .navbar-brand.logo span[role="img"] img {
+  max-height: 50px !important;
+  height: 50px !important;
+}
+
+/* Responsive - Logo sur mobile */
+@media (max-width: 768px) {
+  .navbar-brand.logo img,
+  .navbar-brand.logo span[role="img"],
+  .navbar-brand.logo span[role="img"] img {
+    max-height: 50px !important;
+    height: 50px !important;
+  }
+}
+
+/* Correction de la navbar pour éviter les problèmes d'affichage */
+header nav.navbar {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-collapse {
+  display: flex !important;
+  align-items: center;
+}

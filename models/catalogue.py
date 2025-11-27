@@ -127,8 +127,7 @@ class CatalogueData(models.AbstractModel):
                 {'ref': 'IMP-FLY02', 'desc': 'Flyers A5 (1000 ex)', 'ht': 185, 'ttc': 220.15, 'unite': 'Lot', 'type': 'service'},
                 {'ref': 'IMP-BRO01', 'desc': 'Brochure A4 16 pages (100 ex)', 'ht': 320, 'ttc': 380.8, 'unite': 'Lot', 'type': 'service'},
                 {'ref': 'IMP-BRO02', 'desc': 'Brochure A4 32 pages (100 ex)', 'ht': 520, 'ttc': 618.8, 'unite': 'Lot', 'type': 'service'},
-                {'ref': 'IMP-AFF01', 'desc': 'Affiche A2', 'ht': 8.5, 'ttc': 10.12, 'unite': 'Pièce', 'type': 'service'},
-                {'ref': 'IMP-AFF02', 'desc': 'Affiche A1', 'ht': 14, 'ttc': 16.66, 'unite': 'Pièce', 'type': 'service'},
+                # IMP-AFF01 et IMP-AFF02 sont des variantes du produit "Affiche" - gérées séparément
                 {'ref': 'IMP-ETIQ01', 'desc': 'Étiquettes autocollantes (1000 pcs)', 'ht': 95, 'ttc': 113.05, 'unite': 'Lot', 'type': 'service'},
                 {'ref': 'IMP-MENU01', 'desc': 'Menu restaurant plastifié A4', 'ht': 12, 'ttc': 14.28, 'unite': 'Pièce', 'type': 'service'},
                 {'ref': 'IMP-NCR01', 'desc': 'Carnet autocopiant 50x3 feuillets', 'ht': 19, 'ttc': 22.61, 'unite': 'Pièce', 'type': 'service'},
@@ -212,12 +211,24 @@ class CatalogueData(models.AbstractModel):
             'goodies': {'name': 'Goodies', 'icon': 'fa-gift', 'count': 14},
             'signaletique': {'name': 'Signalétique', 'icon': 'fa-map-signs', 'count': 16},
             'covering': {'name': 'Covering Véhicules', 'icon': 'fa-car', 'count': 7},
-            'impression': {'name': 'Impression', 'icon': 'fa-print', 'count': 12},
+            'impression': {'name': 'Impression', 'icon': 'fa-print', 'count': 11},  # 12 - 1 (Affiche A1/A2 devient 1 produit avec variantes)
             'gravure': {'name': 'Gravure & CNC', 'icon': 'fa-bolt', 'count': 9},
             'decoration': {'name': 'Décoration & PLV', 'icon': 'fa-paint-brush', 'count': 6},
             'textile': {'name': 'Textile & Broderie', 'icon': 'fa-tshirt', 'count': 7},
             'cadeaux': {'name': 'Cadeaux Personnalisés', 'icon': 'fa-heart', 'count': 6},
             'services': {'name': 'Services Graphiques & Installation', 'icon': 'fa-cogs', 'count': 9},
             'consommables': {'name': 'Consommables Production', 'icon': 'fa-cube', 'count': 20},
+        }
+    
+    def get_products_with_variants(self):
+        """Retourne un dictionnaire des produits qui doivent avoir des variantes
+        Format: {base_name: [list of variant data]}
+        """
+        return {
+            'Affiche': [
+                {'ref': 'IMP-AFF01', 'desc': 'Affiche A2', 'ht': 8.5, 'ttc': 10.12, 'unite': 'Pièce', 'type': 'service', 'variant': 'A2'},
+                {'ref': 'IMP-AFF02', 'desc': 'Affiche A1', 'ht': 14, 'ttc': 16.66, 'unite': 'Pièce', 'type': 'service', 'variant': 'A1'},
+            ],
+            # Ajouter d'autres produits avec variantes ici si nécessaire
         }
 

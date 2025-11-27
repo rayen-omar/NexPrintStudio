@@ -16,6 +16,11 @@
     'data': [
         'views/templates.xml',
     ],
+    'assets': {
+        'web.assets_frontend': [
+            'NXPSTudion/static/src/css/nexprint_identity.css',
+        ],
+    },
     'post_init_hook': 'hooks.post_init_hook',
     'installable': True,
     'application': False,
